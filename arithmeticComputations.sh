@@ -5,5 +5,6 @@ read -p "Enter Second Number :- " b
 read -p "Enter Third Number :- " c
 
 firstOperation=$(($a + $b * $c))
-echo $firstOperation
+
+secondOperation=$(($a * $b + $c))
 
