@@ -63,5 +63,8 @@ done
 
 #echo "Array :- ${resultArray[@]}"
 
-descendingResult=`for num in ${resultArray[@]}; do echo $num; done | sort -nr`
-echo $descendingResult
+#descendingResult=`for num in ${resultArray[@]}; do echo $num; done | sort -nr`
+#echo $descendingResult
+
+ascendingResult=`for num in ${resultArray[@]};do echo $num; done | sort -n`
+echo $ascendingResult
