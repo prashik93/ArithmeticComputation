@@ -51,8 +51,8 @@ do
 	flag=false
 done
 
-echo "Dictionary-Keys :- ${!resultDictionary[@]}"
-echo "Dictionary-values :- ${resultDictionary[@]}"
+#echo "Dictionary-Keys :- ${!resultDictionary[@]}"
+#echo "Dictionary-values :- ${resultDictionary[@]}"
 
 for key in "${!resultDictionary[@]}"
 do
@@ -61,4 +61,7 @@ do
 	((index++))
 done
 
-echo "Array :- ${resultArray[@]}"
+#echo "Array :- ${resultArray[@]}"
+
+descendingResult=`for num in ${resultArray[@]}; do echo $num; done | sort -nr`
+echo $descendingResult
