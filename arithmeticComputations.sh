@@ -20,6 +20,11 @@ fourthOperationKey=4
 
 declare -A resultDictionary
 
+declare -A resultArray
+
+index=${#resultArray[@]}
+
+
 flag=true
 
 while $flag
@@ -46,5 +51,14 @@ do
 	flag=false
 done
 
-echo ${!resultDictionary[@]}
-echo ${resultDictionary[@]}
+echo "Dictionary-Keys :- ${!resultDictionary[@]}"
+echo "Dictionary-values :- ${resultDictionary[@]}"
+
+for key in "${!resultDictionary[@]}"
+do
+	value="${resultDictionary[$key]}"
+	resultArray[$index]=$value
+	((index++))
+done
+
+echo "Array :- ${resultArray[@]}"
