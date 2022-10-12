@@ -8,3 +8,5 @@ firstOperation=$(($a + $b * $c))
 
 secondOperation=$(($a * $b + $c))
 
+thirdOperation=$(( $c + ($a/$b) ))
+
