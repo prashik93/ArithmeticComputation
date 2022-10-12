@@ -10,3 +10,4 @@ secondOperation=$(($a * $b + $c))
 
 thirdOperation=$(( $c + ($a/$b) ))
 
+fourthOperation=$(( ($a % $b) + $c ))
