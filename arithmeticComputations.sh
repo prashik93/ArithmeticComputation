@@ -20,7 +20,7 @@ fourthOperationKey=4
 
 declare -A resultDictionary
 
-declare -A resultArray
+declare -a resultArray
 
 index=${#resultArray[@]}
 
@@ -51,20 +51,12 @@ do
 	flag=false
 done
 
-#echo "Dictionary-Keys :- ${!resultDictionary[@]}"
-#echo "Dictionary-values :- ${resultDictionary[@]}"
-
 for key in "${!resultDictionary[@]}"
 do
 	value="${resultDictionary[$key]}"
 	resultArray[$index]=$value
 	((index++))
 done
-
-#echo "Array :- ${resultArray[@]}"
-
-#descendingResult=`for num in ${resultArray[@]}; do echo $num; done | sort -nr`
-#echo $descendingResult
 
 ascendingResult=`for num in ${resultArray[@]};do echo $num; done | sort -n`
 echo $ascendingResult
